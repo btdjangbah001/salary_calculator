@@ -13,6 +13,7 @@ namespace challenge.Models
 
     public class SalaryDetails
     {
+        public double GrossSalary { get; set; }
         public double BasicSalary { get; set; }
         public double TotalPAYETax { get; set; }
         public double EmployeePensionContribution { get; set; }

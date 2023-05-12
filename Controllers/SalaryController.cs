@@ -30,7 +30,8 @@ public class salaryController : Controller
 
         return Ok(new SalaryDetails
         {
-            BasicSalary = Math.Round((double)salaryBeforeTaxAndEmployeePension, 2),
+            GrossSalary = Math.Round((double)salaryBeforeTaxAndEmployeePension, 2),
+            BasicSalary = Math.Round((double)(salaryBeforeTaxAndEmployeePension - salary.Allowance), 2),
             TotalPAYETax = Math.Round((double)(salaryBeforetax - (salary.Salary + salary.Allowance)), 2),
             EmployeePensionContribution = Math.Round((double)(salaryBeforeTaxAndEmployeePension - salaryBeforetax), 2),
             EmployerPensionAmount = Math.Round((double)employeeAmount, 2)
