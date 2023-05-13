@@ -32,7 +32,7 @@ namespace challenge.Services
 		{
             decimal beforePension = salary;
 
-            foreach (decimal deduc in _employeeDeductions)
+            foreach (decimal deduc in _employerDeductions)
             {
                 beforePension = Utilities.CalculateAmountBeforeDeduction(beforePension, deduc);
             }
