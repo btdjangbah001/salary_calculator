@@ -4,7 +4,7 @@ namespace challenge.IServices
 	public interface IPensionService
 	{
 		decimal AmountBeforeEmployeePensionContribution(decimal salary);
-		decimal AmountBeforeEmployerEmployerPension(decimal salary);
+		decimal AmountBeforeEmployerPensionAmount(decimal salary);
 	}
 }
 

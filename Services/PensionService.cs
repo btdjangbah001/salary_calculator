@@ -12,9 +12,10 @@ namespace challenge.Services
         private static readonly decimal _tier1Employer = 0.13m;
         private static readonly decimal _tier2Employer = 0.0m;
         private static readonly decimal _tier3Employer = 0.05m;
-
+		
 		private readonly decimal[] _employeeDeductions = { _tier1Employee,  _tier2Employee, _tier3Employee };
 		private readonly decimal[] _employerDeductions = { _tier1Employer, _tier2Employer, _tier3Employer };
+
         public decimal AmountBeforeEmployeePensionContribution(decimal salary)
 		{
 			decimal beforePension = salary;
@@ -27,7 +28,7 @@ namespace challenge.Services
 			return beforePension;
 		}
 
-        public decimal AmountBeforeEmployerEmployerPension(decimal salary)
+        public decimal AmountBeforeEmployerPensionAmount(decimal salary)
 		{
             decimal beforePension = salary;
 

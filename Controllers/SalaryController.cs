@@ -26,7 +26,7 @@ public class salaryController : Controller
 
         decimal salaryBeforetax = _salaryService.CalculateSalaryAndAllowanceBeforeTax(salary.Salary + salary.Allowance);
         decimal salaryBeforeTaxAndEmployeePension = _pensionService.AmountBeforeEmployeePensionContribution(salaryBeforetax);
-        decimal employeeAmount = _pensionService.AmountBeforeEmployerEmployerPension(salaryBeforeTaxAndEmployeePension);
+        decimal employeeAmount = _pensionService.AmountBeforeEmployerPensionAmount(salaryBeforeTaxAndEmployeePension);
 
         return Ok(new SalaryDetails
         {
